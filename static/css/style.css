@@ -68,6 +68,17 @@
 }
 
 
+.container-fixed {
+    width: 100%;
+    margin: 0%;
+    position: sticky;
+    z-index: 2;
+    top: 0%;
+    left: 0%;
+    right: 0px;
+}
+
+
 /* ------------------------------------------------ */
 
 /* ----------------------------------- VISTA (INDEX) ---------------------------*/
@@ -1219,8 +1230,7 @@
         border-radius: 6px 6px 6px 6px;
         border: 1px solid var(--blue);
         display: none;
-        position: relative;
-        z-index: 3;
+        z-index: 1000;
     }
 
     .container-menu .menu ul li {
@@ -1230,15 +1240,6 @@
         border-inline-start: 2px solid var(--blue);
     }
 
-    .container-fixed {
-        width: 100%;
-        margin: 0%;
-        position: sticky;
-        z-index: 2;
-        top: 0%;
-        left: 0%;
-        right: 0px;
-    }
     /* ------------- */
 
     /* ---- INDEX ---- */
