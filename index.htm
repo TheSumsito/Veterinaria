@@ -6,24 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="container-menu">
         <div class="logo">
-            <img src="static/img/logo.png" alt="">
+            <img src="static/img/logo_footer.png" alt="">
         </div>
-        <div class="menu">
+
+        <div class="icono-menu">
+            <a href="#" id="icono"><span class="icon-menu"></span></a>
+        </div>
+
+        <nav class="menu" id="menu">
             <ul>
-                <li><a href="index.htm">Inicio</a></li>
-                <li><a href="nosotros.htm">Quienes Somos</a></li>
-                <li><a href="servicios.htm">Servicios</a></li>
-                <li><a href="planes.htm">Nuestros Planes</a></li>
-                <li><a href="contacto.htm">Contacto</a></li>
-                <li><a href="login.htm">Login</a></li>
+                <li><a href="index.htm" class="active"><span class="icon-inicio"></span>Inicio</a></li>
+                <li><a href="nosotros.htm"><span class="icon-nosotros"></span>Quienes Somos</a></li>
+                <li><a href="servicios.htm"><span class="icon-servicios"></span>Servicios</a></li>
+                <li><a href="planes.htm"><span class="icon-planes"></span>Nuestros Planes</a></li>
+                <li><a href="contacto.htm"><span class="icon-contacto"></span>Contacto</a></li>
+                <li><a href="login.htm"><span class="icon-login"></span>Login</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 
     <div class="container-carousel">
@@ -143,6 +150,7 @@
             </div>
         </div>
     </footer>
+    <script src="static/js/code.js"></script>
 </body>
 
 </html>

@@ -17,33 +17,56 @@
 .container-menu {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    margin: 10px;
+    padding-top: 20px;
+    background-color: white;
 }
 
 .container-menu .logo {
     grid-column: 2/4;
+    position: relative;
+    top: -10%;
 }
 
-.logo img {
-    position: relative;
+.container-menu .logo img {
+    max-width: 100%;
+}
+
+.container-menu .icono-menu {
+    display: none;
 }
 
 .container-menu .menu {
-    grid-column: 7/11;
-    margin-top: 3%;
+    grid-column: 6/11;
+    display: inline;
+    position: relative;
+    top: 12%;
 }
 
-.menu ul li {
+.container-menu .menu ul li {
     display: inline;
 }
 
-.menu ul li a {
+.container-menu .menu ul li a {
     text-decoration: none;
     padding: 5px;
     color: var(--blue);
     font-family: 'Roboto';
     font-size: 1rem;
 }
+
+.container-menu .menu ul li a:hover {
+    color: var(--darkgray);
+}
+
+.container-menu .menu ul li a span {
+    padding: 5px;
+}
+
+.container-menu .menu ul li .active {
+    color: var(--darkgray);
+    font-weight: bold;
+}
+
 
 /* ------------------------------------------------ */
 
@@ -1164,19 +1187,57 @@
     .container-menu {
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(1, 1fr);
-
     }
 
     .container-menu .logo {
-        grid-column: 1/8;
+        grid-column: 1/5;
         text-align: center;
+        position: relative;
+        left: 30px;
     }
 
+    .container-menu .icono-menu {
+        grid-column: 6/8;
+        text-align: center; 
+        display: block;
+        margin: 0px;
+    }
+
+    .container-menu .icono-menu a {
+        text-decoration: none;
+    }
+
+    .container-menu .icono-menu a span {
+        font-size: 30px;
+        color: var(--blue);
+    }
+    
     .container-menu .menu {
         grid-column: 1/8;
         text-align: center;
+        background-color: var(--lightgray);
+        border-radius: 6px 6px 6px 6px;
+        border: 1px solid var(--blue);
+        display: none;
         position: relative;
-        top: -20%;
+        z-index: 3;
+    }
+
+    .container-menu .menu ul li {
+        display: block;
+        text-align: left;
+        margin: 20px;
+        border-inline-start: 2px solid var(--blue);
+    }
+
+    .container-fixed {
+        width: 100%;
+        margin: 0%;
+        position: sticky;
+        z-index: 2;
+        top: 0%;
+        left: 0%;
+        right: 0px;
     }
     /* ------------- */
 
@@ -1194,6 +1255,7 @@
         top: 25%;
         left: 10%;
         right: 0%;
+        display: none;
     }
 
     .container-carousel .texto h1 {
