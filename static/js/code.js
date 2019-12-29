@@ -1,3 +1,4 @@
+// SE ACTIVA EL MENU AL PRESIONAR EL ICONO EN MODO RESPONSIVO
 $(document).ready(function(){
     var contador = 0;
     $('#icono').click(function () {
@@ -10,8 +11,9 @@ $(document).ready(function(){
         }
     });
 });
+// -----------------------------------------------------------
 
-
+// DEJA STICKY NUESTRO MENU (MENU FIJO)
 $(document).ready(function () {
     var altura = $('.container-menu').offset().top;
     $(window).on('scroll', function() {
@@ -21,6 +23,17 @@ $(document).ready(function () {
         } else {
             $('.container-menu').removeClass('container-fixed');
             $('.menu').removeClass('container-fixed')
+        }
+    });
+});
+// ------------------------------------------------------------
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if($(this).scrollTop() >100) {
+            console.log('100 px');
+        } else {
+            console.log('0 scroll');
         }
     });
 });
