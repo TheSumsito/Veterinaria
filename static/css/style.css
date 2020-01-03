@@ -67,6 +67,37 @@
     font-weight: bold;
 }
 
+/* ---------- SUBMENU --------------- */
+.container-menu .menu .submenu {
+    display: none;
+    z-index: 10;
+    position: relative;
+    left: 32%;
+    background-color: white;
+}
+
+.container-menu .menu li:hover .submenu {
+    display: block;
+    min-width: 140px;
+    position: absolute;
+    padding: 5px 20px;
+    min-width: 50px;
+    min-height: 0px;
+    border: .5px solid var(--blue);
+    border-radius: 10px;
+}
+
+.container-menu .menu .submenu li a {
+    display: block;
+    border: 20px;
+}
+
+
+
+
+
+/* ---------------------------------- */
+
 /* ------------------------------------------------ */
 
 /* ----------------------------------- VISTA (INDEX) ---------------------------*/
@@ -1034,7 +1065,7 @@
 .container-login {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 169px);
+    grid-template-rows: repeat(4, 150px);
     background-color: var(--lightgray);
     position: relative;
     top: -9px;
@@ -1044,7 +1075,7 @@
     grid-column: 3/6;
     text-align: center;
     position: relative;
-    top: 30%;
+    top: 60%;
 }
 
 .container-login .titulo h1 {
@@ -1055,9 +1086,12 @@
 
 .container-login .formulario {
     grid-column: 1/-1;
+    grid-row: 2/2;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(3, 60px);
+    position: relative;
+    top: 30%;
 }
 
 .container-login .formulario .usuario {
@@ -5036,12 +5070,115 @@
 .container-agendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 67px);
+    background-color: var(--lightgray);
 }
 
 .container-agendar .titulo {
     grid-column: 3/6;
+    grid-row: 2/2;
     text-align: center;
+}
+
+.container-agendar .mascota {
+    grid-column: 3/4;
+    grid-row: 3/3;
+    text-align: center;
+    position: relative;
+    left: 30%;
+    top: 60%;
+}
+
+.container-agendar .tipo {
+    grid-column: 5/6;
+    grid-row: 3/3;
+    text-align: center;
+    position: relative;
+    right: 30%;
+    top: 60%;
+}
+
+
+.container-agendar .fecha {
+    grid-column: 3/4;
+    grid-row: 5/5;
+    text-align: center;
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+
+.container-agendar .hora {
+    grid-column: 5/6;
+    grid-row: 5/5;
+    text-align: center;
+    position: relative;
+    right: 30%;
+    top: 30%;
+}
+
+.container-agendar .boton {
+    grid-row: 7/7;
+    grid-column: 3/6;
+    text-align: center;
+}
+
+.container-agendar .titulo h1 {
+    font-family: 'roboto';
+    color: var(--blue);
+}
+
+.container-agendar .mascota p,
+.container-agendar .tipo p, 
+.container-agendar .fecha p,
+.container-agendar .hora p {
+    font-family: 'roboto';
+    color: var(--darkgray);
+    font-size: 2.5vh;
+}
+
+.container-agendar .mascota select,
+.container-agendar .tipo select {
+    font-family: 'roboto';
+    font-size: 15px;
+    padding: 7px 10px;
+    width: 80%;
+    text-align: center;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+
+
+.container-agendar .fecha input,
+.container-agendar .hora input {
+    font-family: 'roboto';
+    color: var(--darkgray);
+    width: 80%;
+    height: 45%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.container-agendar .boton input {
+    padding: 8px 15px;
+    font-family: 'roboto';
+    background-color: var(--blue);
+    color: var(--lightgray);
+    font-size: 2vh;
+    border: .5px solid var(--blue);
+    position: relative;
+    top: 50%;
+    border-radius: 17px;
+}
+
+.container-agendar .boton input:hover {
+    background-color: white;
+    color: var(--darkgray);
+    border: .5px solid var(--darkgray);
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
 }
 
 
